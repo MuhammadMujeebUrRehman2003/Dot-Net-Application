@@ -1,0 +1,74 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    body {
+        background-image: url('path/to/classroom-image.jpg'); /* Replace 'path/to/classroom-image.jpg' with the actual path to your image */
+        background-size: cover; /* Cover the entire background */
+        background-position: center; /* Center the background image */
+        color: orange; /* Default text color */
+    }
+
+    .text-center {
+        padding-top: 50px; /* Adjust the padding to center the content vertically */
+        opacity: 0; /* Start with zero opacity */
+        transition: opacity 2s ease; /* Transition for fading in */
+    }
+
+    .text-center.show {
+        opacity: 1; /* Fade in to full opacity */
+    }
+
+    .text-center h1, .text-center p {
+        color: orange; /* Override text color for the content */
+        transition: color 1s ease; /* Transition for color change */
+    }
+
+    .text-center a {
+        color: darkPink; /* Override link color */
+        text-decoration: none; /* Remove default underline */
+        border: 2px solid darkPurple; /* Add border to simulate button */
+        padding: 5px 10px; /* Add padding for button */
+        border-radius: 5px; /* Add border radius for button */
+        transition: background-color 0.5s ease; /* Transition for color change */
+    }
+
+    .text-center a:hover {
+        background-color: darkPink; /* Change background color on hover */
+        color: white; /* Change text color on hover */
+    }
+</style>
+
+<div class="text-center" id="fadeElement">
+    <h1 class="display-4">Welcome</h1>
+    <p style="color: purple;"> <!-- Apply purple color to the paragraph -->
+        The .NET Framework is a software development platform developed by Microsoft. It provides a large class library and support for various programming languages to build applications for Windows-based systems. One of the primary purposes of the .NET Framework is to provide a consistent and standardized environment for developing and executing applications, making it easier for developers to create robust and scalable software solutions.
+
+        In the context of the provided code, the .NET Framework is being utilized to build web applications using ASP.NET Core. ASP.NET Core is a cross-platform, high-performance framework for building modern, cloud-based, and internet-connected applications. It offers a unified programming model for building web APIs, web apps, and IoT apps.
+        <br> <br> 
+        <button id="colorChangeButton" onclick="window.location.href='https://docs.microsoft.com/aspnet/core'" style="background-color: lightgreen; color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer;">Building Web apps with ASP.NET Core</button>
+    </p>
+</div>
+
+<script>
+    // JavaScript to trigger the fade-in effect and color animation
+    document.addEventListener("DOMContentLoaded", function () {
+        var element = document.getElementById("fadeElement");
+        element.classList.add("show");
+
+        // Function to change text color
+        function changeColor() {
+            var heading = document.querySelector('.text-center h1');
+            var button = document.getElementById('colorChangeButton'); // Select the button element using its ID
+            var currentColor = window.getComputedStyle(heading).color;
+            var newColor = currentColor === 'rgb(255, 165, 0)' ? 'rgb(255, 87, 51)' : 'rgb(0, 128, 0)'; // Change colors alternatively
+            var newButtonColor = currentColor === 'rgb(255, 165, 0)' ? 'purple' : 'lightgreen'; // Change button color alternatively
+            heading.style.color = newColor;
+            button.style.backgroundColor = newButtonColor; // Change button background color
+            setTimeout(changeColor, 5000); // Change color every 5 seconds
+        }
+
+        changeColor(); // Start color animation
+    });
+</script>

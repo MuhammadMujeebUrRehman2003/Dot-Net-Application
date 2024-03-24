@@ -1,0 +1,81 @@
+﻿@model Maju.Models.Student
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<style>
+    /* Container styling */
+    .content-container {
+        text-align: center; /* Align content to the center */
+        background-color: #D8BFD8; /* Light purple background color */
+        padding: 20px; /* Add padding for better presentation */
+        border-radius: 5px; /* Add border radius for rounded corners */
+    }
+</style>
+
+<div class="content-container">
+    <h1 style="color: orange;">Details</h1>
+
+    <div>
+        <h4 style="color: green;">Student</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-4 text-right"> <!-- Adjusted column class to col-sm-4 and added text-right class -->
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+            <dd class="col-sm-8" style="color: brown;"> <!-- Adjusted column class to col-sm-8 -->
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+            <dt class="col-sm-4 text-right"> <!-- Adjusted column class to col-sm-4 and added text-right class -->
+                @Html.DisplayNameFor(model => model.Program)
+            </dt>
+            <dd class="col-sm-8" style="color: brown;"> <!-- Adjusted column class to col-sm-8 -->
+                @Html.DisplayFor(model => model.Program)
+            </dd>
+            <dt class="col-sm-4 text-right"> <!-- Adjusted column class to col-sm-4 and added text-right class -->
+                @Html.DisplayNameFor(model => model.Department)
+            </dt>
+            <dd class="col-sm-8" style="color: brown;"> <!-- Adjusted column class to col-sm-8 -->
+                @Html.DisplayFor(model => model.Department)
+            </dd>
+            <dt class="col-sm-4 text-right"> <!-- Adjusted column class to col-sm-4 and added text-right class -->
+                @Html.DisplayNameFor(model => model.Fee)
+            </dt>
+            <dd class="col-sm-8" style="color: brown;"> <!-- Adjusted column class to col-sm-8 -->
+                @Html.DisplayFor(model => model.Fee)
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model?.Id" class="animated-link btn btn-primary">Edit</a> |
+        <a asp-action="Index" class="animated-link btn btn-primary">Back to List</a>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+<style>
+    /* Apply transition to links for smooth color change */
+    .animated-link {
+        text-decoration: none; /* Remove default underline */
+        transition: color 0.3s, background-color 0.3s; /* Smooth transition for color and background color change */
+        color: pink; /* Initial color */
+        background-color: green; /* Initial background color */
+        padding: 6px 12px; /* Add padding to the buttons */
+        border-radius: 4px; /* Add border radius to the buttons */
+        border: none; /* Remove button border */
+        cursor: pointer; /* Change cursor to pointer */
+    }
+
+    /* Change link color and background color on hover */
+    .animated-link:hover {
+        color: lightcoral; /* New color on hover */
+        background-color: lightyellow; /* New background color on hover */
+        filter: brightness(90%); /* Darken color slightly */
+    }
+</style>

@@ -1,0 +1,126 @@
+﻿@model IEnumerable<Maju.Models.Student>
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<style>
+    /* Apply transition to table rows */
+    .table-row-animation {
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    .table-row-animation.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Apply white color to "Create New" button */
+    #createButton {
+        background-color: pink; /* Apply pink background color */
+        color: white; /* Apply white text color */
+        padding: 5px 10px;
+        border-radius: 3px;
+        text-decoration: none;
+    }
+
+    /* Apply black color to all action buttons */
+    .action-button {
+        background-color: black; /* Apply black background color */
+        color: white; /* Apply white text color */
+        padding: 3px 5px;
+        border-radius: 3px;
+        text-decoration: none;
+    }
+
+    /* Change color of the "Create New" button on hover */
+    #createButton:hover {
+        background-color: skyblue; /* New background color on hover */
+    }
+</style>
+
+<h1 style="color: green;">Index</h1> <!-- Apply color to the header -->
+
+<p>
+    <a id="createButton" asp-action="Create">Create New</a> <!-- Apply white color to the "Create New" button -->
+</p>
+<table id="dataTable" class="table" style="background-color: lightgray;"> <!-- Apply background color to the table -->
+    <thead>
+        <tr style="background-color: lightblue;"> <!-- Apply light blue background color to the table header row -->
+            <th style="color: green;">
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th style="color: green;">
+                @Html.DisplayNameFor(model => model.Program)
+            </th>
+            <th style="color: green;">
+                @Html.DisplayNameFor(model => model.Department)
+            </th>
+            <th style="color: green;">
+                @Html.DisplayNameFor(model => model.Fee)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            string[] rowColors = { "lightyellow", "lightgreen", "lightpink", "lightcoral", "lightskyblue" };
+            int colorIndex = 0;
+        }
+        @foreach (var item in Model)
+        {
+                    <tr class="table-row-animation" style="background-color: @rowColors[colorIndex % rowColors.Length];">
+                        <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                    @Html.DisplayFor(modelItem => item.Program)
+                        </td>
+                        <td>
+                    @Html.DisplayFor(modelItem => item.Department)
+                        </td>
+                        <td>
+                    @Html.DisplayFor(modelItem => item.Fee)
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id" class="action-button">Edit</a> |
+                            <a asp-action="Details" asp-route-id="@item.Id" class="action-button">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@item.Id" class="action-button">Delete</a>
+                        </td>
+                    </tr>
+            colorIndex++;
+        }
+    </tbody>
+</table>
+
+<script>
+    // Add popup on button click
+    document.querySelectorAll('.action-button').forEach(item => {
+        item.addEventListener('click', event => {
+            alert('Button Clicked!');
+        });
+    });
+
+    // Apply animation to table rows
+    document.querySelectorAll('.table-row-animation').forEach(row => {
+        setTimeout(() => {
+            row.classList.add('active');
+        }, 100); // Add class after a small delay for animation
+    });
+
+    // Add color-changing animation
+    let colorChangeInterval = setInterval(() => {
+        document.getElementById('createButton').style.backgroundColor = getRandomColor();
+    }, 1000); // Change color every 1 second
+
+    function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+</script>

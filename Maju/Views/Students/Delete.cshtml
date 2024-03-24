@@ -1,0 +1,105 @@
+﻿@model Maju.Models.Student
+
+
+@{
+    ViewData["Title"] = "Delete";
+}
+<style>
+    /* Container styling */
+    .content-container {
+        text-align: center; /* Align content to the center */
+        background-color: #D8BFD8; /* Light purple background color */
+        padding: 20px; /* Add padding for better presentation */
+        border-radius: 5px; /* Add border radius for rounded corners */
+    }
+</style>
+
+<style>
+    /* Heading and paragraph color styles */
+    h1 {
+        color: #FF5733; /* Red color for h1 */
+    }
+
+    h3 {
+        color: #008000; /* Green color for h3 */
+    }
+
+    h4 {
+        color: #800080; /* Purple color for h4 */
+    }
+
+    p {
+        color: #33FF57; /* Green color for paragraphs */
+    }
+
+    /* Apply transition to buttons for color change */
+    .btn-primary.orange-background {
+        color: #ffffff; /* Button text color */
+        background-color: #FFA500; /* Initial background color */
+        transition: background-color 0.3s, color 0.3s; /* Smooth transition for color change */
+    }
+
+    /* Change button color on hover */
+    .btn-primary.orange-background:hover {
+        background-color: #FF4500; /* New background color on hover */
+    }
+
+    /* Styling for delete data section */
+    .delete-data {
+        background-color: #FFC0CB; /* Pink background color */
+        padding: 10px; /* Add padding for better presentation */
+        margin-bottom: 20px; /* Add some space at the bottom */
+        border-radius: 5px; /* Add border radius for rounded corners */
+    }
+
+    /* Styling for text in delete data section */
+    .delete-data h4,
+    .delete-data dl {
+        color: #800080; /* Purple color for text in delete data section */
+    }
+</style>
+
+<div class="content-container">
+    <h1>Delete</h1>
+
+    <h3>Are you sure you want to delete this?</h3>
+    <div class="delete-data">
+        <h4>Student</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-4 text-right">
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+            <dd class="col-sm-8" style="color: brown;">
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+            <dt class="col-sm-4 text-right">
+                @Html.DisplayNameFor(model => model.Program)
+            </dt>
+            <dd class="col-sm-8" style="color: brown;">
+                @Html.DisplayFor(model => model.Program)
+            </dd>
+            <dt class="col-sm-4 text-right">
+                @Html.DisplayNameFor(model => model.Department)
+            </dt>
+            <dd class="col-sm-8" style="color: brown;">
+                @Html.DisplayFor(model => model.Department)
+            </dd>
+            <dt class="col-sm-4 text-right">
+                @Html.DisplayNameFor(model => model.Fee)
+            </dt>
+            <dd class="col-sm-8" style="color: brown;">
+                @Html.DisplayFor(model => model.Fee)
+            </dd>
+        </dl>
+
+        <div class="d-flex justify-content-center"> <!-- Center align buttons -->
+            <form asp-action="Delete" class="text-center">
+                <input type="hidden" asp-for="Id" />
+                <button type="delete" class="btn btn-danger" style="border-width:auto">Delete</button>
+                <a asp-action="Index" class="btn btn-secondary ml-3">Back to List</a> <!-- Added ml-3 class for 3px margin-left -->
+            </form>
+        </div>
+    </div>
+</div>
+      
