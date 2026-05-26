@@ -1,137 +1,180 @@
-# 🚀 Dot-Net-Application
-
 <div align="center">
 
-![.NET](https://img.shields.io/badge/.NET-Application-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
-![C#](https://img.shields.io/badge/CSharp-Backend-239120?style=for-the-badge&logo=csharp&logoColor=white)
-![SQL Server](https://img.shields.io/badge/SQL_Server-Database-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)
-![Visual Studio](https://img.shields.io/badge/Visual_Studio-IDE-5C2D91?style=for-the-badge&logo=visualstudio&logoColor=white)
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1A0050,50:512BD4,100:239120&height=200&section=header&text=.NET+Web+CRUD+Application&fontSize=38&fontColor=ffffff&fontAlignY=38&desc=C%23+%7C+.NET+%7C+SQL+Server&descAlignY=58&descSize=18&animation=fadeIn" width="100%"/>
+
+### `💻 Web-Based CRUD App — Learning Project`
+
+![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
+![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white)
+![SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)
+![Visual Studio](https://img.shields.io/badge/Visual_Studio-5C2D91?style=for-the-badge&logo=visualstudio&logoColor=white)
+
+<a href="https://git.io/typing-svg">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=18&duration=3000&pause=1000&color=512BD4&center=true&vCenter=true&multiline=true&width=700&height=80&lines=.NET+Web+CRUD+App+%7C+C%23+%2B+SQL+Server;Failed+10+Times.+Succeeded+on+the+11th.;Learning+Web+Dev+Through+Persistence" alt="Typing SVG" />
+</a>
 
 </div>
 
 ---
 
-## 📈 Contribution Activity
+## 📌 Project Overview
+
+> A web-based **CRUD Application** built using **.NET and C#** as part of my backend
+> web development learning journey.
+>
+> This project was not easy — I failed **10 times** before finally getting it right
+> on my **11th attempt**. Each failure taught me something new about persistence,
+> debugging, and problem-solving. Successfully completing this project is one of
+> my most meaningful milestones so far.
+
+---
+
+## 🏗️ What I Built
 
 <div align="center">
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=MuhammadMujeebUrRehman2003&theme=react-dark&hide_border=true" width="100%" />
+| 🗂️ Feature | 📋 Description |
+|:---:|:---|
+| **Create** | Add new records via validated web forms |
+| **Read** | Retrieve and display records from SQL Server |
+| **Update** | Edit and save changes to existing entries |
+| **Delete** | Remove records securely from the database |
+| **SQL Server Integration** | Relational database connectivity and management |
+| **Form Validation** | Input error handling and data accuracy checks |
+| **Layered Architecture** | Organized code structure for maintainability |
 
 </div>
 
 ---
 
-# 📌 Project Overview
-
-This project is a modern **.NET-based application** developed to demonstrate strong backend development concepts, clean architecture, and real-world software engineering practices.
-
-The application focuses on building scalable modules, handling business logic efficiently, and creating maintainable enterprise-level solutions.
-
----
-
-# 🏗️ Key Features Implemented
-
-## 🔹 CRUD Operations
-
-- Create, Update, Delete, and Retrieve records
-- Efficient database handling
-- Optimized backend processing
-
----
-
-## 🔹 Responsive User Interface
-
-- Clean and user-friendly design
-- Smooth navigation experience
-- Better user interaction
-
----
-
-## 🔹 Database Integration
-
-- SQL Server connectivity
-- Structured relational database management
-- Secure data storage
-
----
-
-## 🔹 Layered Architecture
-
-- Better code organization
-- Improved maintainability
-- Scalable application structure
-
----
-
-## 🔹 Form Validation
-
-- Secure data handling
-- Error prevention mechanisms
-- Improved data accuracy
-
----
-
-# 🧠 Skills & Tools (Visual Icons)
+## 🧠 Tools & Technologies
 
 <div align="center">
 
 <img src="https://skillicons.dev/icons?i=cs,dotnet,visualstudio,git,github" />
 
-<br>
+</div>
 
-<img src="https://img.shields.io/badge/.NET-Development-512BD4?style=for-the-badge" />
-<img src="https://img.shields.io/badge/CSharp-Programming-239120?style=for-the-badge" />
-<img src="https://img.shields.io/badge/SQL-Database-CC2927?style=for-the-badge" />
-<img src="https://img.shields.io/badge/Architecture-Layered-orange?style=for-the-badge" />
+---
+
+## ⚡ Application Workflow
+
+<div align="center">
+
+```text
+ User Opens Web App
+        │
+        ▼
+ Web Form / UI Layer
+        │
+        ▼
+ Form Validation
+        │
+        ▼
+ Backend Logic (C# / .NET)
+        │
+        ▼
+ SQL Server Database
+        │
+        ▼
+ Response Returned to UI
+```
 
 </div>
 
 ---
 
-# 📊 Skill Proficiency Overview
+## 📊 Project Status
 
-```text
-.NET Development        ██████████████████ 90%
-C# Programming          ████████████████   85%
-Database Handling       ██████████████     80%
-Backend Logic           ███████████████    85%
-Software Architecture   █████████████      78%
+<div align="center">
+
+| Feature | Status |
+|---|---|
+| Create Record | ✅ Completed |
+| Read / View Records | ✅ Completed |
+| Update Record | ✅ Completed |
+| Delete Record | ✅ Completed |
+| SQL Server Integration | ✅ Completed |
+| Form Validation | ✅ Completed |
+| Authentication | 🔜 Planned |
+| Cloud Deployment | 🔜 Planned |
+
+</div>
+
+---
+
+## 🚀 Key Learning Outcomes
+
+```diff
++ Built a complete web-based CRUD app using .NET and C#
++ Connected and managed a relational database using SQL Server
++ Applied layered architecture for better code organization
++ Understood backend logic, routing, and form handling
++ Learned to debug and fix errors through repeated attempts
++ Built confidence through persistence — failed 10x, succeeded on the 11th
 ```
 
 ---
 
-# 🚀 Learning Outcomes
+## 💡 The Real Story Behind This Project
 
-This project significantly strengthened my understanding of:
+<div align="center">
 
-- Enterprise-level .NET application development
-- Layered software architecture
-- SQL Server database management
-- CRUD-based system development
-- Backend logic implementation
-- Real-world software engineering practices
+> *"I failed 10 times before this worked."*
 
----
+</div>
 
-# 🚀 Future Enhancements
+This wasn't a smooth build. There were errors I didn't understand,
+logic that broke in unexpected ways, and moments where starting over
+felt easier than continuing. But each failed attempt taught me
+something the previous one didn't.
 
-- Authentication & Authorization
-- API Integration
-- Cloud Deployment
-- Performance Optimization
-- Advanced Security Features
-- Responsive UI Improvements
+Getting this working on the **11th try** was more valuable than
+if it had worked on the first — because now I understand *why* it works.
 
 ---
 
-# 🙏 Acknowledgement
+## 🔮 Future Enhancements
 
-Special thanks to my mentors and instructors for their continuous guidance and support throughout the development of this project.
+- [ ] 🔐 User Authentication & Authorization
+- [ ] 🌐 REST API Integration
+- [ ] ☁️ Cloud Deployment
+- [ ] 🎨 Improved Responsive UI
+- [ ] 🔒 Advanced Security Features
+- [ ] ⚡ Performance Optimization
 
 ---
 
-# ⭐ Conclusion
+## 🙏 Acknowledgement
 
-This project reflects my growing expertise in **.NET Development, Backend Engineering, and Software Architecture** while continuously improving my problem-solving and development skills.
+<div align="center">
+
+> 💡 Special thanks to my mentor and tutor
+> **[Haris Irfan](https://www.linkedin.com/in/haris-irfan-0b2480209/)**
+> for his guidance and support throughout this journey.
+> His mentorship helped me stay motivated through every failed
+> attempt and push through to a successful result.
+
+</div>
 
 ---
+
+## ⭐ Conclusion
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:239120,50:512BD4,100:1A0050&height=120&section=footer&text=Failed+10+Times.+Succeeded+on+the+11th.&fontSize=16&fontColor=ffffff&fontAlignY=65&animation=fadeIn" width="100%"/>
+
+</div>
+
+> *This project is proof that consistency and learning from failure
+> matter more than getting it right the first time.*
+> *— Built with C#, .NET, and a lot of persistence.*
+
+---
+
+<div align="center">
+
+⭐ **If this project or story resonated with you, consider starring the repo!**
+
+</div>
